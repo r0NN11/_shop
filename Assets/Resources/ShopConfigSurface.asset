@@ -1,0 +1,255 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dee67a87691329479e898586a1a6836, type: 3}
+  m_Name: ShopConfigSurface
+  m_EditorClassIdentifier: 
+  _settingCustomCards:
+  - _nameSaveSelectObject: Element_Location_Select_1
+    _price: 25
+    _id: 21
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_1
+  - _nameSaveSelectObject: Element_Location_Select_2
+    _price: 50
+    _id: 22
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_2
+  - _nameSaveSelectObject: Element_Location_Select_3
+    _price: 75
+    _id: 23
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_3
+  - _nameSaveSelectObject: Element_Location_Select_4
+    _price: 100
+    _id: 24
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_4
+  - _nameSaveSelectObject: Element_Location_Select_5
+    _price: 125
+    _id: 25
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_5
+  - _nameSaveSelectObject: Element_Location_Select_6
+    _price: 150
+    _id: 26
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_6
+  - _nameSaveSelectObject: Element_Location_Select_7
+    _price: 175
+    _id: 27
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_1
+  - _nameSaveSelectObject: Element_Location_Select_8
+    _price: 200
+    _id: 28
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_2
+  - _nameSaveSelectObject: Element_Location_Select_9
+    _price: 225
+    _id: 29
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_3
+  - _nameSaveSelectObject: Element_Location_Select_10
+    _price: 250
+    _id: 30
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_4
+  - _nameSaveSelectObject: Element_Location_Select_11
+    _price: 275
+    _id: 31
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_5
+  - _nameSaveSelectObject: Element_Location_Select_12
+    _price: 300
+    _id: 32
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_6
+  - _nameSaveSelectObject: Element_Location_Select_13
+    _price: 325
+    _id: 33
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_1
+  - _nameSaveSelectObject: Element_Location_Select_14
+    _price: 350
+    _id: 34
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_2
+  - _nameSaveSelectObject: Element_Location_Select_15
+    _price: 375
+    _id: 35
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_3
+  - _nameSaveSelectObject: Element_Location_Select_16
+    _price: 400
+    _id: 36
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_4
+  - _nameSaveSelectObject: Element_Location_Select_17
+    _price: 425
+    _id: 37
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_5
+  - _nameSaveSelectObject: Element_Location_Select_18
+    _price: 450
+    _id: 38
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_6
+  - _nameSaveSelectObject: Element_Location_Select_19
+    _price: 475
+    _id: 39
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_1
+  - _nameSaveSelectObject: Element_Location_Select_20
+    _price: 500
+    _id: 40
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_2
+  - _nameSaveSelectObject: Element_Location_Select_21
+    _price: 525
+    _id: 41
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_3
+  - _nameSaveSelectObject: Element_Location_Select_22
+    _price: 550
+    _id: 42
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_4
+  - _nameSaveSelectObject: Element_Location_Select_23
+    _price: 575
+    _id: 43
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_5
+  - _nameSaveSelectObject: Element_Location_Select_24
+    _price: 600
+    _id: 44
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_6
+  - _nameSaveSelectObject: Element_Location_Select_25
+    _price: 625
+    _id: 45
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_1
+  - _nameSaveSelectObject: Element_Location_Select_26
+    _price: 650
+    _id: 46
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_2
+  - _nameSaveSelectObject: Element_Location_Select_27
+    _price: 675
+    _id: 47
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_3
+  - _nameSaveSelectObject: Element_Location_Select_28
+    _price: 700
+    _id: 48
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_4
+  - _nameSaveSelectObject: Element_Location_Select_29
+    _price: 725
+    _id: 49
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_5
+  - _nameSaveSelectObject: Element_Location_Select_30
+    _price: 750
+    _id: 50
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_6
+  - _nameSaveSelectObject: Element_Location_Select_31
+    _price: 775
+    _id: 51
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_1
+  - _nameSaveSelectObject: Element_Location_Select_32
+    _price: 800
+    _id: 52
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_2
+  - _nameSaveSelectObject: Element_Location_Select_34
+    _price: 825
+    _id: 53
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_3
+  - _nameSaveSelectObject: Element_Location_Select_35
+    _price: 850
+    _id: 54
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_4
+  - _nameSaveSelectObject: Element_Location_Select_36
+    _price: 875
+    _id: 55
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_5
+  - _nameSaveSelectObject: Element_Location_Select_37
+    _price: 900
+    _id: 56
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_6
+  - _nameSaveSelectObject: Element_Location_Select_38
+    _price: 925
+    _id: 57
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_1
+  - _nameSaveSelectObject: Element_Location_Select_39
+    _price: 950
+    _id: 58
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_2
+  - _nameSaveSelectObject: Element_Location_Select_40
+    _price: 1000
+    _id: 59
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_3
+  - _nameSaveSelectObject: Element_Location_Select_41
+    _price: 1000
+    _id: 60
+    _spriteIconName: Substrate
+    _spriteBgName: 
+    _spriteSurfaceName: Surface_4
