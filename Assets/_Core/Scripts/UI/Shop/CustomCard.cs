@@ -1,11 +1,9 @@
 using System;
+using _Core.Scripts.DataPersistence;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
-using _Core.Scripts.DataPersistence;
-using _Core.Scripts.DataPersistence.Data;
-using Unity.VisualScripting;
+
 
 namespace _Core.Scripts.UI.Shop
 {
@@ -29,7 +27,7 @@ namespace _Core.Scripts.UI.Shop
             _actionBuy = actionBuy;
             _settingCustomCard = settingCustomCard;
             var price = _settingCustomCard.GetPrice();
-            var currentCoin = WalletController.Instance.GetCurrent_Coin();
+            var currentCoin = DataPersistenceManager.instance.GetGameData().coinAmount;
             _imageIconPrice.sprite = _settingCustomCard.GetSpriteIcon();
             _textPriceCard.text = price.ToString("f0");
             if (settingCustomCard.IsBuyCard())

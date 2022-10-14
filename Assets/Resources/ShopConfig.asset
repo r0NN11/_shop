@@ -17,7 +17,7 @@ MonoBehaviour:
     _price: 25
     _id: 1
     _spriteIconName: Substrate
-    _spriteBgName: BG_1
+    _spriteBgName: BG_3
     _spriteSurfaceName: 
   - _nameSaveSelectObject: Element_Location_Select_2
     _price: 50
@@ -38,13 +38,13 @@ MonoBehaviour:
     _spriteBgName: BG_4
     _spriteSurfaceName: 
   - _nameSaveSelectObject: Element_Location_Select_5
-    _price: 125
+    _price: 159
     _id: 5
     _spriteIconName: Substrate
     _spriteBgName: BG_5
     _spriteSurfaceName: 
   - _nameSaveSelectObject: Element_Location_Select_6
-    _price: 150
+    _price: 288
     _id: 6
     _spriteIconName: Substrate
     _spriteBgName: BG_6

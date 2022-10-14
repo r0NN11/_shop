@@ -12,104 +12,79 @@ namespace _Core.Scripts.UI.Shop
         [SerializeField] private Transform _parentCustomCardBg;
         [SerializeField] private Transform _parentCustomCardSurface;
         [SerializeField] private GameObject _shop;
-
-        private CustomCard _customCard;
+        [SerializeField] private GameObject _shopBg;
+        [SerializeField] private GameObject _shopSurface;
         private List<CustomCard> _customCards;
         private List<CustomCard> _customCardsSurface;
-        private SettingCustomCard _settingCustomCard;
         private List<string> _boughtCustomCards;
         private string _chosenCardBgId;
         private string _chosenCardSurfaceId;
 
         public void StartBgShop(List<SettingCustomCard> settingCustomCards, CustomCard customCard)
         {
-            LoadData(DataPersistenceManager.instance.GetGameData());
-            _customCard = customCard;
-            _shop.SetActive(true);
             if (_customCards == null)
-            {
                 _customCards = new List<CustomCard>(settingCustomCards.Count);
+            LoadData(DataPersistenceManager.instance.GetGameData());
+            StartShop(_customCards, settingCustomCards, customCard, _parentCustomCardBg, Buy, _shopBg);
+        }
+
+        public void StartSurfaceShop(List<SettingCustomCard> settingCustomCards, CustomCard customCard)
+        {
+            if (_customCardsSurface == null)
+                _customCardsSurface = new List<CustomCard>(settingCustomCards.Count);
+            LoadData(DataPersistenceManager.instance.GetGameData());
+            StartShop(_customCardsSurface, settingCustomCards, customCard, _parentCustomCardSurface, BuySurface,
+                _shopSurface);
+        }
+
+        private void StartShop(List<CustomCard> customCards, List<SettingCustomCard> settingCustomCards,
+            CustomCard customCard, Transform shopParent, Action<SettingCustomCard> actionBuy, GameObject shop)
+        {
+            if (customCards.Count == 0)
+            {
                 foreach (var cardSetting in settingCustomCards)
                 {
-                    var card = Instantiate(customCard, _parentCustomCardBg);
-                    card.SetSettingCustomCard(cardSetting, Buy);
-                    _customCards.Add(card);
-                    if (!cardSetting.IsBuyCard()) continue;
+                    var card = Instantiate(customCard, shopParent);
+                    card.SetSettingCustomCard(cardSetting, actionBuy);
+                    customCards.Add(card);
+                    if (!cardSetting.IsBuyCard())
+                        continue;
                     card.SetBuyInactive();
-                    if (cardSetting.GetId() == _chosenCardBgId)
-                        card.SetImageBg(cardSetting);
+                    CheckChosenCard(cardSetting, card);
                 }
             }
             else
             {
                 for (var i = 0; i < settingCustomCards.Count; i++)
                 {
-                    _customCards[i].gameObject.SetActive(true);
-                    _customCards[i].SetSettingCustomCard(settingCustomCards[i], Buy);
+                    shop.SetActive(true);
+                    customCards[i].SetSettingCustomCard(settingCustomCards[i], actionBuy);
 
-                    if (!settingCustomCards[i].IsBuyCard()) continue;
-                    _customCards[i].SetBuyInactive();
-                    if (settingCustomCards[i].GetId() == _chosenCardBgId)
-                        _customCards[i].SetImageBg(settingCustomCards[i]);
+                    if (!settingCustomCards[i].IsBuyCard())
+                        continue;
+                    customCards[i].SetBuyInactive();
+                    CheckChosenCard(settingCustomCards[i], customCards[i]);
                 }
             }
 
             _shop.SetActive(true);
         }
 
-        public void StartSurfaceShop(List<SettingCustomCard> settingCustomCards, CustomCard customCard)
+        private void CheckChosenCard(SettingCustomCard settingCustomCard, CustomCard card)
         {
-            LoadData(DataPersistenceManager.instance.GetGameData());
-            _customCard = customCard;
-            if (_customCardsSurface == null)
-            {
-                _customCardsSurface = new List<CustomCard>(settingCustomCards.Count);
-                foreach (var cardSetting in settingCustomCards)
-                {
-                    var card = Instantiate(customCard, _parentCustomCardSurface);
-                    card.SetSettingCustomCard(cardSetting, BuySurface);
-                    _customCardsSurface.Add(card);
-                    if (!cardSetting.IsBuyCard()) continue;
-                    card.SetBuyInactive();
-                    if (cardSetting.GetId() == _chosenCardSurfaceId)
-                        card.SetImageSurface(cardSetting);
-                }
-            }
-            else
-            {
-                for (var i = 0; i < settingCustomCards.Count; i++)
-                {
-                    _customCardsSurface[i].gameObject.SetActive(true);
-                    _customCardsSurface[i].SetSettingCustomCard(settingCustomCards[i], BuySurface);
-
-                    if (!settingCustomCards[i].IsBuyCard()) continue;
-                    _customCardsSurface[i].SetBuyInactive();
-                    if (settingCustomCards[i].GetId() == _chosenCardSurfaceId)
-                        _customCardsSurface[i].SetImageSurface(settingCustomCards[i]);
-                }
-            }
-
-            _shop.SetActive(true);
+            if (settingCustomCard.GetId() == _chosenCardBgId)
+                card.SetImageBg(settingCustomCard);
+            else if (settingCustomCard.GetId() == _chosenCardSurfaceId)
+                card.SetImageSurface(settingCustomCard);
         }
 
         private void CloseShop()
         {
             if (_customCards != null)
-            {
-                for (var i = 0; i < _customCards.Count; i++)
-                {
-                    _customCards[i].gameObject.SetActive(false);
-                }
-            }
+                _shopBg.SetActive(false);
 
             if (_customCardsSurface != null)
-            {
-                for (var i = 0; i < _customCardsSurface.Count; i++)
-                {
-                    _customCardsSurface[i].gameObject.SetActive(false);
-                }
-            }
-
+                _shopSurface.SetActive(false);
             _shop.SetActive(false);
         }
 
@@ -118,13 +93,13 @@ namespace _Core.Scripts.UI.Shop
         {
             var price = settingCustomCard.GetPrice();
             var id = settingCustomCard.GetId();
-            var currentCoin = WalletController.Instance.GetCurrent_Coin();
+            var currentCoin = DataPersistenceManager.instance.GetGameData().coinAmount;
             if (settingCustomCard.IsBuyCard())
                 settingCustomCard.SetSelectObject();
             else if (price <= currentCoin)
             {
                 currentCoin -= price;
-                WalletController.Instance.Set_Coin(currentCoin);
+                DataPersistenceManager.instance.GetGameData().SetCoinAmount(currentCoin);
                 settingCustomCard.SetSelectObject();
                 _boughtCustomCards.Add(id);
                 DataPersistenceManager.instance.GetGameData().boughtCustomCards.Add(id);
@@ -138,13 +113,13 @@ namespace _Core.Scripts.UI.Shop
         {
             var price = settingCustomCard.GetPrice();
             var id = settingCustomCard.GetId();
-            var currentCoin = WalletController.Instance.GetCurrent_Coin();
+            var currentCoin = DataPersistenceManager.instance.GetGameData().coinAmount;
             if (settingCustomCard.IsBuyCard())
                 settingCustomCard.SetSelectObjectSurface();
             else if (price <= currentCoin)
             {
                 currentCoin -= price;
-                WalletController.Instance.Set_Coin(currentCoin);
+                DataPersistenceManager.instance.GetGameData().SetCoinAmount(currentCoin);
                 settingCustomCard.SetSelectObjectSurface();
                 _boughtCustomCards.Add(id);
                 DataPersistenceManager.instance.GetGameData().boughtCustomCards.Add(id);
@@ -164,7 +139,6 @@ namespace _Core.Scripts.UI.Shop
 
         public void SaveData(GameData data)
         {
-            
         }
     }
 }

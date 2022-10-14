@@ -15,8 +15,14 @@ namespace _Core.Scripts.DataPersistence.Data
 
         public GameData()
         {
-            coinAmount = 500;
+            coinAmount = 2000;
             boughtCustomCards = new List<string>();
+        }
+
+        public void SetCoinAmount(int coins)
+        {
+            coinAmount = coins;
+            DataPersistenceManager.instance.UpdateGameData();
         }
     }
 }

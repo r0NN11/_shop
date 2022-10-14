@@ -7,7 +7,6 @@ namespace _Core.Scripts.UI
 {
     public class BackGroundController : MonoBehaviour
     {
-        [SerializeField] private Transform _transformBG;
         [SerializeField] private SpriteRenderer _backGround;
         [SerializeField] private SpriteRenderer _surface;
         private float _distance;
@@ -21,15 +20,15 @@ namespace _Core.Scripts.UI
             SettingCustomCard.OnChangeSelectObject += SetBackGround;
             SettingCustomCard.OnChangeSelectObjectSurface += SetSurface;
             var data = DataPersistenceManager.instance.GetGameData();
-            if (data.chosenCardBgId.Length != 0)
-                _backGround.sprite = _shopConfig.GetSettingCustomCard()[Convert.ToInt32(data.chosenCardBgId) - 1]
-                    .GetSpriteBg();
-            if (data.chosenCardSurfaceId.Length != 0)
-                _surface.sprite =
-                    _shopConfigSurface.GetSettingCustomCard()[Convert.ToInt32(data.chosenCardSurfaceId) - 21]
-                        .GetSpriteSurface();
-            print(Convert.ToInt32(data.chosenCardBgId));
-            print(Convert.ToInt32(data.chosenCardSurfaceId));
+            if (data.chosenCardBgId != null)
+                if (data.chosenCardBgId.Length != 0)
+                    _backGround.sprite = _shopConfig.GetSettingCustomCard()[Convert.ToInt32(data.chosenCardBgId) - 1]
+                        .GetSpriteBg();
+            if (data.chosenCardSurfaceId != null)
+                if (data.chosenCardSurfaceId.Length != 0)
+                    _surface.sprite =
+                        _shopConfigSurface.GetSettingCustomCard()[Convert.ToInt32(data.chosenCardSurfaceId) - 21]
+                            .GetSpriteSurface();
         }
 
         private void SetBackGround()

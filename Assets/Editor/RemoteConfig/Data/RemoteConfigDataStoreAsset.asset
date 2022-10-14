@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"75cad332-85f1-4d7d-b71c-2c52acb6b7b5\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c2c687c5-f737-49f1-9607-91b5b3356607\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopConfigBg\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"_settingCustomCards\":
     [\r\n          {\r\n            \"_nameSaveSelectObject\": \"Element_Location_Select_1\",\r\n           
     \"_price\": 25,\r\n            \"_id\": \"1\",\r\n            \"_spriteIconName\":
-    \"Substrate\",\r\n            \"_spriteBgName\": \"BG_1\",\r\n            \"_spriteSurfaceName\":
+    \"Substrate\",\r\n            \"_spriteBgName\": \"BG_3\",\r\n            \"_spriteSurfaceName\":
     \"\"\r\n          },\r\n          {\r\n            \"_nameSaveSelectObject\":
     \"Element_Location_Select_2\",\r\n            \"_price\": 50,\r\n           
     \"_id\": \"2\",\r\n            \"_spriteIconName\": \"Substrate\",\r\n           
@@ -86,7 +86,7 @@ MonoBehaviour:
     \"_id\": \"20\",\r\n            \"_spriteIconName\": \"Substrate\",\r\n           
     \"_spriteBgName\": \"BG_2\",\r\n            \"_spriteSurfaceName\": \"\"\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"189f993a-ffad-48de-9f76-b0b0e51a54c4\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"b2725678-1c69-43a7-b7cc-149e7a5da46b\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"ShopConfigSurface\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"_settingCustomCards\":
     [\r\n          {\r\n            \"_nameSaveSelectObject\": \"Element_Location_Select_1\",\r\n           
@@ -230,12 +230,12 @@ MonoBehaviour:
     \"_id\": \"60\",\r\n            \"_spriteIconName\": \"Substrate\",\r\n           
     \"_spriteBgName\": \"\",\r\n            \"_spriteSurfaceName\": \"Surface_4\"\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"75cad332-85f1-4d7d-b71c-2c52acb6b7b5\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c2c687c5-f737-49f1-9607-91b5b3356607\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopConfigBg\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"_settingCustomCards\":
     [\r\n          {\r\n            \"_nameSaveSelectObject\": \"Element_Location_Select_1\",\r\n           
     \"_price\": 25,\r\n            \"_id\": \"1\",\r\n            \"_spriteIconName\":
-    \"Substrate\",\r\n            \"_spriteBgName\": \"BG_1\",\r\n            \"_spriteSurfaceName\":
+    \"Substrate\",\r\n            \"_spriteBgName\": \"BG_3\",\r\n            \"_spriteSurfaceName\":
     \"\"\r\n          },\r\n          {\r\n            \"_nameSaveSelectObject\":
     \"Element_Location_Select_2\",\r\n            \"_price\": 50,\r\n           
     \"_id\": \"2\",\r\n            \"_spriteIconName\": \"Substrate\",\r\n           
@@ -304,7 +304,7 @@ MonoBehaviour:
     \"_id\": \"20\",\r\n            \"_spriteIconName\": \"Substrate\",\r\n           
     \"_spriteBgName\": \"BG_2\",\r\n            \"_spriteSurfaceName\": \"\"\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"189f993a-ffad-48de-9f76-b0b0e51a54c4\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"b2725678-1c69-43a7-b7cc-149e7a5da46b\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"ShopConfigSurface\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"_settingCustomCards\":
     [\r\n          {\r\n            \"_nameSaveSelectObject\": \"Element_Location_Select_1\",\r\n           

@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
 using _Core.Scripts.DataPersistence.Data;
 using UnityEngine;
-using System.Linq;
 
 namespace _Core.Scripts.DataPersistence
 {
@@ -15,6 +13,12 @@ namespace _Core.Scripts.DataPersistence
         private FileDataHandler _dataHandler;
         public static DataPersistenceManager instance { get; private set; }
         public GameData GetGameData() => _gameData;
+        public static event Action OnUpdateGameData;
+
+        public void UpdateGameData()
+        {
+            OnUpdateGameData?.Invoke();
+        }
 
         private void Awake()
         {

@@ -477,7 +477,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 872892780}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &214982223
 MonoBehaviour:
@@ -1000,7 +1000,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 918395740}
-  - {fileID: 2033115259}
   - {fileID: 214982222}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1382,6 +1381,8 @@ MonoBehaviour:
   _parentCustomCardBg: {fileID: 150472780}
   _parentCustomCardSurface: {fileID: 1817859475}
   _shop: {fileID: 333896948}
+  _shopBg: {fileID: 732315246}
+  _shopSurface: {fileID: 1358922722}
 --- !u!1 &1079503662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a220a40a22fa2e64f85907cf0ff211c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transformBG: {fileID: 1268981968}
   _backGround: {fileID: 1268981969}
   _surface: {fileID: 1517885274}
 --- !u!1 &1355865172
@@ -2164,50 +2164,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &2033115258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2033115259}
-  - component: {fileID: 2033115260}
-  m_Layer: 0
-  m_Name: WalletController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2033115259
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033115258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 872892780}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2033115260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033115258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec6702f5ad6c4d46a98162f3e1cc8ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2062132155
 GameObject:
   m_ObjectHideFlags: 0
